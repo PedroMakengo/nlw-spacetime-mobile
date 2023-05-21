@@ -75,7 +75,13 @@ export default function App() {
     return null
   }
   return (
-    <View className="px-8 py-10 flex-1 items-center bg-gray-900">
+    <ImageBackground
+      source={blurBg}
+      className="relative px-8 py-10 flex-1 items-center bg-gray-900"
+      imageStyle={{ position: 'absolute', left: '-50%' }}
+    >
+      <StyledStripes className="absolute left-2" />
+
       <View className="flex-1 items-center justify-center gap-6">
         <NLWLogo />
 
@@ -104,6 +110,6 @@ export default function App() {
         Feito com 💜 no NLW da Rocketseat
       </Text>
       <StatusBar style="light" translucent />
-    </View>
+    </ImageBackground>
   )
 }
